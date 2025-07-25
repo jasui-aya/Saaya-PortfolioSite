@@ -153,6 +153,11 @@ body {
 .nav_menu-wrapper{
   display: none;
 }
+@media screen and (min-width: 1080px) {
+  .nav_menu-wrapper{
+    display: block;
+  }
+}
 
 .nav_menu-wrapper.is-active{
   display: block;
@@ -172,6 +177,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1080px) {
+  .nav_ul-box{
+    height: 100vh;
+  }
 }
 
 .nav_items_list{
@@ -210,6 +220,11 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
+}
+@media screen and (min-width: 1080px) {
+  .nav_sns-links{
+    margin-top: 40px;
+  }
 }
 
 .logo-black{
