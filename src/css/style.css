@@ -144,10 +144,21 @@ body {
   font-size: 40px;
   font-weight: bold;
   color: var(--main-text-color);
+  line-height: 1.75;
+}
+@media screen and (min-width: 1080px) {
+  .l_header_main-title{
+    font-size: 52px;
+  }
 }
 
 .l_header_sub-title{
   font-size: 20px;
+}
+@media screen and (min-width: 1080px) {
+  .l_header_sub-title{
+    font-size: 32px;
+  }
 }
 
 .nav_menu-wrapper{
@@ -270,6 +281,16 @@ body {
   color: var(--main-text-color);
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
 }
+@media screen and (min-width: 1080px) {
+  .top_kv_title{
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .u_br__kv{
+    display: none;
+  }
+}
 
 .u_kv-decoration {
   background: linear-gradient(transparent 70%, var(--accent-color) 70%);
@@ -278,6 +299,23 @@ body {
 .m_main-content{
   margin: 40px 0px 60px;
 }
+@media screen and (min-width: 1080px) {
+  .m_main-content{
+   margin: 24px 0px 150px;
+   text-align: center;
+  }
+}
+
+.u_br__kv-p{
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .u_br__kv-p{
+    display: block;
+  }
+}
+
+
 /* ------------  works  ------------ */
 .m_section-title{
   font-size: 24px;
@@ -290,10 +328,20 @@ body {
   position: relative;
   gap: 0.5em; /* タイトルと線の間のスペース */
 }
+@media screen and (min-width: 1080px) {
+  .m_section-title{
+    font-size: 32px;
+  }
+}
 
 .m_section-decoration{
   font-size: 12px;
   color: var(--sub-text-color);
+}
+@media screen and (min-width: 1080px) {
+  .m_section-decoration{
+    font-size: 14px;
+  }
 }
 
 .m_section-title::after{
@@ -312,9 +360,21 @@ body {
   flex-direction: column;
   gap: 56px;
 }
+@media screen and (min-width: 1080px) {
+  .top_works_items{
+    flex-direction: unset;
+    justify-content: space-between;
+    gap: 56px;
+  }
+}
 
 .top_works_item{
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 1080px) {
+  .top_works_item{
+    width: 350px;
+  }
 }
 
 .top_works_img-box{
@@ -330,11 +390,21 @@ body {
 .top_works_item-content{
   padding: 24px 16px;
 }
+@media screen and (min-width: 1080px) {
+  .top_works_item-content{
+    padding: 24px;
+  }
+}
 
 .top_works_sub-title{
   font-size: 18px;
   font-weight: 500;
   color: var(--main-text-color);
+}
+@media screen and (min-width: 1080px) {
+  .top_works_sub-title{
+    font-size: 24px;
+  }
 }
 
 .top_works_category{
@@ -342,13 +412,33 @@ body {
   font-weight: 500;
   color: var(--primary-color);
 }
+@media screen and (min-width: 1080px) {
+  .top_works_category{
+    font-size: 14px;
+  }
+}
 
 .top_works_main-content{
   margin-top: 0.5em;
 }
+@media screen and (min-width: 1080px) {
+  .top_works_main-content{
+    margin-top: 12px;
+  }
+}
 /* ------------  about  ------------ */
 .top_about{
   background-color: var(--accent-sub-fade-color);
+}
+
+@media screen and (min-width: 1080px) {
+  .top_about_diplay-box{
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px auto 0;
+  }
 }
 
 .top_about_img-box{
@@ -356,9 +446,21 @@ body {
   margin: 32px auto 0px;
   box-shadow: 3px 3px 10px var(--sub-text-color);
 }
+@media screen and (min-width: 1080px) {
+  .top_about_img-box{
+    width: 210px;
+    margin: 0px;
+  }
+}
 
 .top_about_my-pic{
   width: 100%;
+}
+
+@media screen and (min-width: 1080px) {
+  .top_about_content-box{
+    width: 460px;
+  }
 }
 
 .top_about_sub-title{
@@ -369,10 +471,23 @@ body {
   margin-top: 16px;
   text-align: center;
 }
+@media screen and (min-width: 1080px) {
+  .top_about_sub-title{
+    font-size: 32px;
+    margin-top: 0px;
+    text-align: left;
+  }
+}
 
 .top_about_content{
   margin-top: 8px;
   padding: 0 16px;
+}
+@media screen and (min-width: 1080px) {
+  .top_about_content{
+    margin-top: 8px;
+    padding: 0px;
+  }
 }
 /* ------------  skills  ------------ */
 .top_skills{
@@ -386,6 +501,18 @@ body {
 .u_br__skills{
   display: none;
 }
+@media screen and (min-width: 1080px) {
+  .u_br__skills{
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .top_skills_cards-list{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .top_skills_card-box{
   margin-top: 32px;
@@ -395,6 +522,11 @@ body {
   background-color: var(--white-color);
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
   padding: 24px 16px;
+}
+@media screen and (min-width: 1080px) {
+  .top_skills_card-item{
+    width: 260px;
+  }
 }
 
 .top_skills_card-title{
@@ -420,6 +552,11 @@ body {
 .top_skills_icon{
   width: 70px;
 }
+@media screen and (min-width: 1080px) {
+  .top_skills_icon{
+    width: 50px;
+  }
+}
 
 .top_skills_skill-name{
   font-size: 14px;
@@ -428,9 +565,22 @@ body {
   margin-top: 16px;
   text-align: center;
 }
+@media screen and (min-width: 1080px) {
+  .top_skills_skill-name{
+    display: flex;
+    height: 39px;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .top_skills_card-content{
   margin-top: 24px;
+}
+@media screen and (min-width: 1080px) {
+  .top_skills_card-content{
+    margin-top: 20px;
+  }
 }
 
 /* ------------  contact  ------------ */
