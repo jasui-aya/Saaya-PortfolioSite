@@ -3,7 +3,7 @@
 :root {
 	/* 色管理用の変数 */
 	--white-color: #fff;
-  --bg-color: #FAFAFA;
+  --bg-color: #fafafa;
 	--main-text-color: #2d3748;
   --sub-text-color: #4A5568;
 	--icon-color: #2C5282;
@@ -21,9 +21,11 @@
 
 /* ---------- base ---------- */
 
+html,
 body {
   color: var(--sub-text-color);
-  background-color: var(--bg-color);
+  background: var(--bg-color);
+  height: 100%;
   font-family: "Poppins", "Noto Sans JP" ,serif, sans-serif;
   line-height: 1.5;
   letter-spacing: 0.05em;
@@ -40,11 +42,11 @@ body {
 }
 
 .l_container{
-  max-width: calc(var(--content-width) + 164px);
+  max-width: calc(var(--content-width) + 32px);
 }
 
 .l_container-sm{
-  max-width: calc(var(--content-width-sm) + 328px);
+  max-width: calc(var(--content-width-sm) + 32px);
 }
 
 .l_contents{
@@ -61,19 +63,14 @@ body {
 /* ------------  header  ------------ */
 .top_gradient-wrapper{
   background: linear-gradient(to bottom, var(--primary-sub-fade-color), var(--bg-color));
-  min-height: 100vh;
+  height: 1500px;
 }
 
 .l_header{
   width: 100%;
-  height: 100vh;
   padding-top: 70px; 
 }
-@media screen and (min-width: 1080px) {
-  .l_header{
-    max-width: 700px;
-  }
-}
+
 
 .l_header_bar{
   width: 100%;
@@ -85,6 +82,11 @@ body {
   position: fixed;
   top: 0;
   z-index: 1001;
+}
+@media screen and (min-width: 1080px) {
+  .l_header_bar{
+    display: none;
+  }
 }
 
 
@@ -135,6 +137,7 @@ body {
 
 .l_header_title-box{
   margin-top: 100px;
+  height: 100vh;
 }
 
 .l_header_main-title{
@@ -162,20 +165,33 @@ body {
   position: fixed;
 }
 
-.nav_items_sp{
+.nav_ul-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_items_list{
   width: 120px;
   height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 130px auto 0;
 }
 
 .nav_items_link{
   font-size: 24px;
   font-weight: 700;
   color: var(--main-text-color);
+}
+@media screen and (min-width: 1080px) {
+  .nav_items_link{
+    color: var(--white-color);
+  }
 }
 
 .nav_sns-icon__insta{
@@ -193,8 +209,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px auto;
+  margin-top: 30px;
 }
+
+.logo-black{
+  display: inline;
+}
+
+.logo-white{
+  display: none;
+}
+@media screen and (min-width: 1080px) {
+  .logo-black{
+    display: none;
+  }
+  
+  .logo-white{
+    display: inline;
+  }
+}
+/* ---- PC用のレイアウト ---- */
+@media screen and (min-width: 1080px) {
+  .l_header_pc-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: var(--primary-color);
+  }
+
+  .main-contents_for_pc{
+    width: calc(100% - 240px);
+    margin-left: 240px;
+  }
+}
+
 
 
 /* ------------  kv  ------------ */
