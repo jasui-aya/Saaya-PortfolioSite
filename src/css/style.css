@@ -1,0 +1,486 @@
+@charset "UTF-8";
+
+:root {
+	/* 色管理用の変数 */
+	--white-color: #fff;
+  --bg-color: #FAFAFA;
+	--main-text-color: #2d3748;
+  --sub-text-color: #4A5568;
+	--icon-color: #2C5282;
+	--primary-color: #4A7C59;
+  --primary-sub-fade-color: rgba(164, 212, 181, 0.9);
+  --sub-color: #A4D4B5;
+  --accent-color: rgba(255, 195, 57, 0.3);
+  --accent-sub-fade-color: rgba(255, 195, 57, 0.05);
+
+	/* コンテンツ幅管理用の変数 */
+	--content-width: 962px;
+	--content-width-sm: 798px;
+}
+	
+
+/* ---------- base ---------- */
+
+body {
+  color: var(--sub-text-color);
+  background-color: var(--bg-color);
+  font-family: "Poppins", "Noto Sans JP" ,serif, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+}
+
+
+/* 共通する見た目を管理するクラス */
+.l_container,
+.l_container-sm{ 
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.l_container{
+  max-width: calc(var(--content-width) + 164px);
+}
+
+.l_container-sm{
+  max-width: calc(var(--content-width-sm) + 328px);
+}
+
+.l_contents{
+	padding: 60px 0;
+}
+@media screen and (min-width: 1080px) {
+  .l_contents{
+	padding: 100px 0;
+ }
+}
+
+/* ------------------------------------------------ */
+/* ------------  index.html  ------------ */
+/* ------------  header  ------------ */
+.top_gradient-wrapper{
+  background: linear-gradient(to bottom, var(--primary-sub-fade-color), var(--bg-color));
+  min-height: 100vh;
+}
+
+.l_header{
+  width: 100%;
+  height: 100vh;
+  padding-top: 70px; 
+}
+@media screen and (min-width: 1080px) {
+  .l_header{
+    max-width: 700px;
+  }
+}
+
+.l_header_bar{
+  width: 100%;
+  height: 70px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+}
+
+
+/* ----- hamburger ------- */
+.l_header-hamburger{
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 999;
+}
+
+.m_hamburger span{
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-text-color);
+  position: absolute;
+  left: 0;
+}
+
+.m_hamburger span:nth-child(1){
+  top: 0;
+}
+
+.m_hamburger span:nth-child(2){
+  top: 50%;
+}
+
+.m_hamburger span:nth-child(3){
+  top: 100%;
+}
+
+/* ハンバーガー閉じたときの動き */
+.l_header-hamburger.is-active span:nth-child(1){
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.l_header-hamburger.is-active span:nth-child(2){
+  opacity: 0;
+}
+
+.l_header-hamburger.is-active span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+/* ---------------------------------------------- */
+
+.l_header_title-box{
+  margin-top: 100px;
+}
+
+.l_header_main-title{
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--main-text-color);
+}
+
+.l_header_sub-title{
+  font-size: 20px;
+}
+
+.nav_menu-wrapper{
+  display: none;
+}
+
+.nav_menu-wrapper.is-active{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: var(--primary-sub-fade-color);
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  position: fixed;
+}
+
+.nav_items_sp{
+  width: 120px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 130px auto 0;
+}
+
+.nav_items_link{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+
+.nav_sns-icon__insta{
+  width: 40px;
+  height: 40px;
+}
+
+.nav_sns-icon__threads{
+  width: 52px;
+  height: 56px;
+}
+
+.nav_sns-links{
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+
+/* ------------  kv  ------------ */
+.top_kv_title{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.75;
+  color: var(--main-text-color);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+}
+
+.u_kv-decoration {
+  background: linear-gradient(transparent 70%, var(--accent-color) 70%);
+}
+
+.m_main-content{
+  margin: 40px 0px 60px;
+}
+/* ------------  works  ------------ */
+.m_section-title{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.75;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  gap: 0.5em; /* タイトルと線の間のスペース */
+}
+
+.m_section-decoration{
+  font-size: 12px;
+  color: var(--sub-text-color);
+}
+
+.m_section-title::after{
+  content: "";
+  flex-grow: 1; /* 余ったスペース分だけ線の装飾が伸びる */
+  height: 1px;
+  background: var(--primary-color);
+}
+
+.top_works_article-wrap{
+  margin-top: 32px;
+}
+
+.top_works_items{
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.top_works_item{
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.top_works_img-box{
+  height: 200px;
+}
+
+.top_works_img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top_works_item-content{
+  padding: 24px 16px;
+}
+
+.top_works_sub-title{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+
+.top_works_category{
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.top_works_main-content{
+  margin-top: 0.5em;
+}
+/* ------------  about  ------------ */
+.top_about{
+  background-color: var(--accent-sub-fade-color);
+}
+
+.top_about_img-box{
+  width: 150px;
+  margin: 32px auto 0px;
+  box-shadow: 3px 3px 10px var(--sub-text-color);
+}
+
+.top_about_my-pic{
+  width: 100%;
+}
+
+.top_about_sub-title{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-text-color);
+  line-height: 1.75;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.top_about_content{
+  margin-top: 8px;
+  padding: 0 16px;
+}
+/* ------------  skills  ------------ */
+.top_skills{
+  background-color: var(--accent-sub-fade-color);
+}
+
+.top_skills_content{
+  margin-top: 32px;
+}
+
+.u_br__skills{
+  display: none;
+}
+
+.top_skills_card-box{
+  margin-top: 32px;
+}
+
+.top_skills_card-item{
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
+  padding: 24px 16px;
+}
+
+.top_skills_card-title{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.75;
+  color: var(--main-text-color);
+  border-bottom: 1px solid var(--sub-text-color);
+  text-align: center;
+}
+
+.top_skills_icon-box{
+  margin-top: 24px;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+}
+
+.u_skills_icon__cording{
+  gap: 10px;
+}
+
+.top_skills_icon{
+  width: 70px;
+}
+
+.top_skills_skill-name{
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--main-text-color);
+  margin-top: 16px;
+  text-align: center;
+}
+
+.top_skills_card-content{
+  margin-top: 24px;
+}
+
+/* ------------  contact  ------------ */
+.top_contact_content{
+  margin-top: 32px;
+}
+
+.top_contact_table{
+  margin-top: 24px;
+}
+
+.top_contact_table-item:not(:first-child){
+  margin-top: 16px;
+}
+
+.top_contact_header{
+  font-weight: bold;
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.top_contact_required{
+  font-size: 12px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  padding: 4px 14px;
+  margin-left: 8px;
+  line-height: 1;
+}
+
+.top_contact_data{
+  border: 1px solid #A0AEC0;
+  margin-top: 4px;
+}
+
+.top_contact_form-text,
+.top_contact_form-textarea{
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+}
+
+textarea{
+  resize: none;
+}
+
+.top_contact_privacy-box{
+  margin: 24px 13px 0;
+  padding: 24px 16px;
+  border: 3px solid var(--primary-color);
+}
+
+.top_contact_privacy-content{
+  font-weight: 500;
+}
+
+.top_contact_privacy-check{
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-checkbox{
+  width: 16px;
+  height: 16px;
+  border: 1px solid #A0AEC0;
+  position: relative;
+}
+
+.privacy-checkbox:checked::before {
+  position: absolute;
+  content: "✓";
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox{
+  margin-left: 8px;
+}
+
+.top_contact_send-button{
+  color: var(--white-color);
+  font-weight: bold;
+  background: var(--primary-color);
+  margin: 32px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 206px;
+  height: 56px;
+  border-radius: 10px;
+}
+
+/* ------------  footer  ------------ */
+.l_footer{
+  height: 50px;
+  background: var(--primary-sub-fade-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.l_footer_copyright-text{
+  font-size: 12px;
+  
+}
+
+/* ------------------------------------------------ */
+/* ------------  works.html  ------------ */
