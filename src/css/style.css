@@ -374,12 +374,12 @@ body {
 /* 個別の円の配置とアニメーション */
 .circle1 {
   top: 60%;
-  left: 25%;
+  left: 20%;
   animation: float1 14s ease-in-out infinite;
 }
 
 .circle2 {
-  top: 25%;
+  top: 18%;
   right: 8%;
   animation: float2 18s ease-in-out infinite -2s;
 }
@@ -390,9 +390,9 @@ body {
 @media screen and (min-width: 1080px) {
   .circle3 {
     display: block;
-    top: 45%;
-    right: 20%;
-    animation: float3 16s ease-in-out infinite -4s;
+    top: 80%;
+    right: 30%;
+    animation: float3 16s ease-in-out infinite -8s;
   }
 }
 
@@ -440,7 +440,7 @@ body {
 
 .circle9 {
   top: 90%;
-  right: 45%;
+  left: -10%;
   animation: float3 21s ease-in-out infinite -9s;
 }
 
@@ -452,7 +452,7 @@ body {
 
 .circle11 {
   top: 110%;
-  right: 5%;
+  right: 6%;
   animation: float2 14s ease-in-out infinite -10s;
 }
 
@@ -947,13 +947,191 @@ textarea{
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .l_footer_copyright-text{
   font-size: 12px;
-  
 }
 
 /* ------------------------------------------------ */
 /* ------------  works.html  ------------ */
+.gradient-for-works{
+  height: 700px;
+}
+
+.works_title-box{
+  margin-top: 48px;
+}
+@media screen and (min-width: 1080px) {
+.works_title-box{
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+}
+}
+
+.works_main-title{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-text-color);
+  line-height: 1.75;
+}
+@media screen and (min-width: 1080px) {
+  .works_main-title{
+    font-size: 32px;
+  }
+}
+
+.works_category{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+@media screen and (min-width: 1080px) {
+  .works_category{
+    font-size: 24px;
+    margin-left: 16px;
+  }
+}
+
+.works_url{
+  margin-top: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--sub-text-color);
+}
+@media screen and (min-width: 1080px) {
+  .works_url{
+    font-size: 16px;
+  }
+}
+
+.works_url:hover{
+  color: var(--primary-color);
+}
+
+.works_mockup-box{
+  margin-top: 24px;
+}
+@media screen and (min-width: 1080px) {
+.works_mockup-box{
+  margin: 40px auto 0;
+  max-width: 798px;
+}
+}
+
+@media screen and (min-width: 1080px) {
+  .works_detail_pc-box{
+    max-width: 798px;
+    margin: 100px auto 0px;
+  }
+}
+
+.works_mockup-img{
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1080px) {
+  .works_mockup-img{
+    width: 100%;
+    height: 438px;
+  }
+}
+
+.works_detail_summary{
+  margin-top: 64px;
+}
+
+.works_detail_title{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-text-color);
+  line-height: 1.75;
+}
+@media screen and (min-width: 1080px) {
+  .works_detail_title{
+    width: 157px;
+  }
+}
+
+.works_detail_disc{
+  padding: 8px 8px 24px;
+}
+@media screen and (min-width: 1080px) {
+  .works_detail_summary .works_detail_disc{
+    padding: 0px 0px 40px;
+  }
+
+  .works_detail_disc{
+    max-width: 560px;
+    padding: 40px 0px;
+  } 
+}
+
+.works_border-dec{
+  border-bottom: 1px solid var(--sub-color);
+}
+@media screen and (min-width: 1080px) {
+  .works_border-dec{
+    display: flex;
+  }
+}
+
+.works_detail_margin{
+  margin-top: 24px;
+}
+@media screen and (min-width: 1080px) {
+  .works_detail_margin{
+    margin-top: 40px;
+  }
+}
+
+.works_detail_more{
+  color: var(--main-text-color);
+  font-weight: bold;
+  margin: 32px 0 64px;
+  text-align: right;
+}
+@media screen and (min-width: 1080px) {
+  .works_detail_more{
+    margin: 48px 48px 100px;
+  }
+}
+
+.works_detail_more-link{
+  font-size: 14px;
+  line-height: 1.75;
+  border-bottom: 1px solid var(--sub-text-color);
+}
+@media screen and (min-width: 1080px) {
+  .works_detail_more-link{
+    font-size: 16px;
+  }
+}
+
+.works_detail_more-link:hover{
+  color: var(--primary-color);
+}
+
+.works_detail_disc__space{
+  display: block;
+  margin-top: 1em;
+}
+
+.works_epick_link{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.works_epick_link:hover{
+  color: var(--primary-color);
+}
+
+/* ---- PC用のレイアウト ---- */
+@media screen and (min-width: 1080px) {
+  .works_detail{
+    width: calc(100% - 240px);
+    margin-left: 240px;
+  }
+}
