@@ -3,6 +3,7 @@
 // ハンバーガーメニュー
 const ham = document.getElementById("js-hamburger");
 const nav = document.getElementById("js-hamburger-nav");
+const navLinks = nav.querySelectorAll('a'); 
 
     ham.addEventListener("click",() => {
         ham.classList.toggle("is-active");
