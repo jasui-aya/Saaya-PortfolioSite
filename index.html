@@ -286,25 +286,24 @@
               <div class="top_contact_table-item">
                 <dt class="top_contact_header">お名前<span class="top_contact_required">必須</span></dt>
                 <dd class="top_contact_data">
-                  <input type="text" name="名前" class="top_contact_form-text" placeholder="例）山田 太郎">
+                  <input type="text" name="name" required class="top_contact_form-text" placeholder="例）山田 太郎">
                 </dd>
               </div>
 
               <div class="top_contact_table-item">
                 <dt class="top_contact_header">メールアドレス<span class="top_contact_required">必須</span></dt>
                 <dd class="top_contact_data">
-                  <input type="email" name="メアド" class="top_contact_form-text" placeholder="例）info@saaya.com">
+                  <input type="email" name="email" required class="top_contact_form-text" placeholder="例）info@saaya.com">
                 </dd>
               </div>
 
               <div class="top_contact_table-item">
                 <dt class="top_contact_header">お問い合わせ内容<span class="top_contact_required">必須</span></dt>
                 <dd class="top_contact_data">
-                  <textarea name="問い合わせ" rows="5" class="top_contact_form-textarea"></textarea>
+                  <textarea name="message" required rows="5" class="top_contact_form-textarea"></textarea>
                 </dd>
               </div>
             </dl>
-          </form>
 
           <div class="top_contact_privacy-box">
             <p class="top_contact_privacy-content">
@@ -318,6 +317,8 @@
           </div>
 
           <button type="submit" class="top_contact_send-button">この内容で送信する</button>
+         </form>
+
         </div>
         </div>
       </section>
