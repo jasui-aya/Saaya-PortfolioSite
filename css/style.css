@@ -112,29 +112,35 @@ body {
 
 .m_hamburger span:nth-child(1){
   top: 0;
+  transition: all 0.2s ease;
 }
 
 .m_hamburger span:nth-child(2){
   top: 50%;
+  transition: all 0.2s ease;
 }
 
 .m_hamburger span:nth-child(3){
-  top: 100%;
+  top: 100%;  
+  transition: all 0.2s ease;
 }
 
 /* ハンバーガー閉じたときの動き */
 .l_header-hamburger.is-active span:nth-child(1){
   transform: rotate(45deg);
   top: 10px;
+  transition: all 0.2s ease;
 }
 
 .l_header-hamburger.is-active span:nth-child(2){
   opacity: 0;
+  transition: all 0.2s ease;
 }
 
 .l_header-hamburger.is-active span:nth-child(3){
   transform: rotate(-45deg);
   top: 10px;
+  transition: all 0.2s ease;
 }
 
 /* ---------------------------------------------- */
@@ -219,6 +225,15 @@ body {
   }
 }
 
+.nav_items_item{
+  transition: all 0.2s ease
+}
+
+.nav_items_item:hover{
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+}
+
 .nav_sns-icon__insta{
   width: 40px;
   height: 40px;
@@ -244,6 +259,7 @@ body {
 
 .logo-black{
   display: inline;
+  transition: all 0.2s ease
 }
 
 .logo-white{
@@ -256,8 +272,16 @@ body {
   
   .logo-white{
     display: inline;
+    transition: all 0.2s ease
   }
 }
+
+.logo-black:hover,
+.logo-white:hover{
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+}
+
 /* ---- PC用のレイアウト ---- */
 @media screen and (min-width: 1080px) {
   .l_header_pc-sidebar{
@@ -588,11 +612,16 @@ body {
 
 .top_works_item{
   box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 @media screen and (min-width: 1080px) {
   .top_works_item{
     width: 350px;
   }
+}
+
+.top_works_item:hover{
+  transform: scale(1.05);
 }
 
 .top_works_img-box{
@@ -930,6 +959,7 @@ textarea{
   width: 206px;
   height: 56px;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
 @media screen and (min-width: 1080px) {
   .top_contact_send-button{
@@ -938,6 +968,12 @@ textarea{
     width: 300px;
     height: 64px;
   }
+}
+
+.top_contact_send-button:hover{
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+  background: #589269;
 }
 
 /* ------------  footer  ------------ */
