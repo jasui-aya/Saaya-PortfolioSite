@@ -12,6 +12,7 @@
   --sub-color: #A4D4B5;
   --accent-color: rgba(255, 195, 57, 0.3);
   --accent-sub-fade-color: rgba(255, 195, 57, 0.05);
+  --hover-color: #6FA97C;
 
 	/* コンテンツ幅管理用の変数 */
 	--content-width: 962px;
@@ -1037,7 +1038,7 @@ textarea{
 }
 
 .works_url:hover{
-  color: var(--primary-color);
+  color: var(--hover-color);
 }
 
 .works_mockup-box{
@@ -1142,7 +1143,7 @@ textarea{
 }
 
 .works_detail_more-link:hover{
-  color: var(--primary-color);
+  color: 	var(--hover-color);
 }
 
 .works_detail_disc__space{
@@ -1156,7 +1157,7 @@ textarea{
 }
 
 .works_epick_link:hover{
-  color: var(--primary-color);
+  color: var(--hover-color);
 }
 
 /* ---- PC用のレイアウト ---- */
