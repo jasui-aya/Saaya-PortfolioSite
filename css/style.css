@@ -207,7 +207,7 @@ body {
 
 .nav_items_list{
   width: 120px;
-  height: 260px;
+  height: 290px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -250,11 +250,6 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
-}
-@media screen and (min-width: 1080px) {
-  .nav_sns-links{
-    margin-top: 40px;
-  }
 }
 
 .logo-black{
